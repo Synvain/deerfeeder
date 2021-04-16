@@ -1,7 +1,6 @@
 #include <RTClib.h>
 #include <TimeLib.h>
 #include <Time.h>
-#include <Servo.h>
 #include <LowPower.h>
 
 #define BUTTON_INTERRUPT_PIN 7
@@ -43,6 +42,7 @@ bool feed_is_on = false;
 void feed_on();
 void feed_off();
 void get_next_event(DateTime now, Event *next_event, DateTime *event_time );
+int32_t get_event_sod(Event event);
 
 void setup() {
   pinMode(LED, OUTPUT);
